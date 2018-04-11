@@ -8,7 +8,7 @@ struct Node{
 };
 
 int isEmpty(struct Node* stackTop){
-	if(stackTop == NULL){
+	if(stackTop->next == NULL){
 		return 1;
 	}
 	return 0;
