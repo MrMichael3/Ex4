@@ -8,7 +8,9 @@ struct Node{
 };
 
 int isEmpty(struct Node* stackTop){
-	
+	if(stackTop == NULL){
+		return 1;
+	}
 	return 0;
 }
 void push(struct Node** stackTop,int key){
