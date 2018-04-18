@@ -21,7 +21,17 @@ void push(struct Node** stackTop,int key){
 	*stackTop=newNode;
 	
 }
-int pop(struct Node** stackTop,int key){
+int pop(struct Node** stackTop){
+	if(isEmpty(*stackTop)){
+		return -1;
+	}
+	int key = (*stackTop)->key;
+	struct Node *temp = (*stackTop)->next;
+	free(*stackTop);
+	*stackTop=temp;
+	return key;
+	
+	
 	
 	return 0;
 }
