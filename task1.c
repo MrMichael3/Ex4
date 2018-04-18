@@ -38,11 +38,21 @@ void printStack(struct Node* stackTop){
 			printf("%d\n",stackTop->key);
 			stackTop = stackTop->next;
 		}
-	}
-	
+		//print first element
+		printf("%d\n",stackTop->key);
+	}	
 }
 
 
 int main(){
+	struct Node** stackTop=malloc(sizeof(struct Node*));
+	*stackTop=NULL;
+  	push(stackTop,1);
+  	push(stackTop,2);
+	pop(stackTop);
+  	push(stackTop,3);
+  	push(stackTop,4);
+  	
+  	printStack(*stackTop);
 	return 0;
 }
