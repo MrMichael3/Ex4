@@ -30,12 +30,15 @@ int pop(struct Node** stackTop){
 	free(*stackTop);
 	*stackTop=temp;
 	return key;
-	
-	
-	
-	return 0;
 }
 void printStack(struct Node* stackTop){
+	printf("stack:\n");
+	if(isEmpty(stackTop)==0){
+		while(stackTop->next != NULL){
+			printf("%d\n",stackTop->key);
+			stackTop = stackTop->next;
+		}
+	}
 	
 }
 
